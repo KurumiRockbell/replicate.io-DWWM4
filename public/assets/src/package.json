@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "flowbite": "^1.6.5",
+    "uglify-js": "^3.17.4"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}

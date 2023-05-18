@@ -123,5 +123,4 @@ use SYRADEV\app\ReplicateController;
     <script src="<?= ReplicateController::assets('/src/node_modules/flowbite/dist/datepicker.js'); ?>"></script>
     <script src="<?= ReplicateController::assets('/src/node_modules/flowbite/dist/flowbite.min.js'); ?>"></script>
 </body>
-
 </html>

@@ -41,8 +41,8 @@ use SYRADEV\app\ReplicateController;
                                 </svg>
                             </button>
                             <!--Grid and hidden don't apply the same property don't trust this-->
-                            <div id="mega-menu-icons-dropdown" class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-gray-950 border border-lime-500 rounded-lg shadow-md md:grid-cols-3">
-                                <div class="p-4 pb-0 text-gray-900 md:pb-4">
+                            <div id="mega-menu-icons-dropdown" class="absolute z-10 grid hidden w-3/4 md:w-auto grid-cols-2 text-sm bg-black border border-lime-500 rounded-lg shadow-md md:grid-cols-3">
+                                <div class="p-8 md:pb-4">
                                     <ul class="space-y-4" aria-labelledby="mega-menu-icons-dropdown-button">
                                         <li>
                                             <a type="button" onClick="document.getElementById('menurplc').scrollIntoView();" class="cursor-pointer flex items-center text-teal-50 hover:text-indigo-800 group">
@@ -82,7 +82,7 @@ use SYRADEV\app\ReplicateController;
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="p-4 pb-0 text-gray-900 md:pb-4">
+                                <div class="p-8 text-gray-900 md:pb-4">
                                     <ul class="space-y-4">
                                         <li>
                                             <a href="#" class="flex items-center text-teal-50 hover:text-indigo-800 group">
@@ -122,7 +122,7 @@ use SYRADEV\app\ReplicateController;
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="p-4 pb-0 text-gray-900 md:pb-4">
+                                <div class="p-8 text-gray-900 md:pb-4">
                                     <ul class="space-y-4">
                                         <li>
                                             <a href="#" class="flex items-center text-teal-50 hover:text-indigo-800 group">

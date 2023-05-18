@@ -79,6 +79,24 @@ return [
         'action' => 'home',
         'info' => 'Affiche la page d\'accueil.'
     ],
+    'news' => [
+        'access' => 'web',
+        'privacy' => 'public',
+        'method' => 'get',
+        'route' => '/news',
+        'class' => ReplicateController::class,
+        'action' => 'news',
+        'info' => 'Affiche la page des news.'
+    ],
+    'market' => [
+        'access' => 'web',
+        'privacy' => 'public',
+        'method' => 'get',
+        'route' => '/market',
+        'class' => ReplicateController::class,
+        'action' => 'market',
+        'info' => 'Affiche la page du marketplace.'
+    ],
     'dashboard' => [
         'access' => 'web',
         'privacy' => 'private',

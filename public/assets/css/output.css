@@ -1683,6 +1683,10 @@ input:checked + .toggle-bg {
   padding: 1.5rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -2427,6 +2431,10 @@ input:checked + .toggle-bg {
 
   .lg\:w-1\/2 {
     width: 50%;
+  }
+
+  .lg\:w-auto {
+    width: auto;
   }
 
   .lg\:grid-cols-4 {

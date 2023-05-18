@@ -388,6 +388,26 @@ class ReplicateController
 
     /**
      * Affichage :
+     * Affiche la page des news
+     * @return void
+     */
+    public function news(): void
+    {
+        echo $this->render('Layouts.default', 'Templates.MvcUI.news', null, 'News');
+    }
+
+    /**
+     * Affichage :
+     * Affiche la page du marketplace
+     * @return void
+     */
+    public function market(): void
+    {
+        echo $this->render('Layouts.default', 'Templates.MvcUI.market', null, 'Market');
+    }
+
+    /**
+     * Affichage :
      * Affiche la page d'erreur 404
      * @return void
      */

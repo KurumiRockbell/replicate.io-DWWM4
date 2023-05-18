@@ -41,7 +41,7 @@ use SYRADEV\app\ReplicateController;
                                 </svg>
                             </button>
                             <!--Grid and hidden don't apply the same property don't trust this-->
-                            <div id="mega-menu-icons-dropdown" class="absolute z-10 grid hidden w-3/4 md:w-auto grid-cols-2 text-sm bg-black border border-lime-500 rounded-lg shadow-md md:grid-cols-3">
+                            <div id="mega-menu-icons-dropdown" class="absolute z-10 grid hidden w-3/4 grid-cols-2 text-sm bg-black border border-lime-500 rounded-lg shadow-md lg:p-2 md:w-auto md:grid-cols-3">
                                 <div class="p-8 md:pb-4">
                                     <ul class="space-y-4" aria-labelledby="mega-menu-icons-dropdown-button">
                                         <li>
@@ -85,7 +85,7 @@ use SYRADEV\app\ReplicateController;
                                 <div class="p-8 text-gray-900 md:pb-4">
                                     <ul class="space-y-4">
                                         <li>
-                                            <a href="#" class="flex items-center text-teal-50 hover:text-indigo-800 group">
+                                            <a href="<?= ReplicateController::getRoute('news'); ?>" class="cursor-pointer flex items-center text-teal-50 hover:text-indigo-800 group">
                                                 <span class="sr-only">News</span>
                                                 <svg class="w-4 h-4 mr-2 text-teal-50 group-hover:text-indigo-800" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"></path>
@@ -94,7 +94,7 @@ use SYRADEV\app\ReplicateController;
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" class="flex items-center text-teal-50 hover:text-indigo-800 group">
+                                            <a href="<?= ReplicateController::getRoute('market'); ?>" class="cursor-pointer flex items-center text-teal-50 hover:text-indigo-800 group">
                                                 <span class="sr-only">Marketplace</span>
                                                 <svg class="w-4 h-4 mr-2 text-teal-50 group-hover:text-indigo-800" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z"></path>

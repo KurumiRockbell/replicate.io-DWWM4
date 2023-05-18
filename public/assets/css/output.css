@@ -1293,6 +1293,10 @@ input:checked + .toggle-bg {
   height: 75%;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1740,6 +1744,16 @@ input:checked + .toggle-bg {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 }
 
 .pb-0 {
@@ -2310,6 +2324,22 @@ input:checked + .toggle-bg {
     height: 100vh;
   }
 
+  .md\:h-3 {
+    height: 0.75rem;
+  }
+
+  .md\:h-3\/4 {
+    height: 75%;
+  }
+
+  .md\:h-1 {
+    height: 0.25rem;
+  }
+
+  .md\:h-1\/2 {
+    height: 50%;
+  }
+
   .md\:w-auto {
     width: auto;
   }
@@ -2391,6 +2421,10 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 1024px) {
+  .lg\:m-6 {
+    margin: 1.5rem;
+  }
+
   .lg\:my-24 {
     margin-top: 6rem;
     margin-bottom: 6rem;
@@ -2445,6 +2479,18 @@ input:checked + .toggle-bg {
     gap: 4rem;
   }
 
+  .lg\:p-8 {
+    padding: 2rem;
+  }
+
+  .lg\:p-3 {
+    padding: 0.75rem;
+  }
+
+  .lg\:p-2 {
+    padding: 0.5rem;
+  }
+
   .lg\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -2458,6 +2504,11 @@ input:checked + .toggle-bg {
   .lg\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .lg\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .lg\:pt-12 {
@@ -2480,8 +2531,24 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 1280px) {
+  .xl\:m-3 {
+    margin: 0.75rem;
+  }
+
+  .xl\:m-12 {
+    margin: 3rem;
+  }
+
   .xl\:p-0 {
     padding: 0px;
+  }
+
+  .xl\:p-6 {
+    padding: 1.5rem;
+  }
+
+  .xl\:p-3 {
+    padding: 0.75rem;
   }
 }
 

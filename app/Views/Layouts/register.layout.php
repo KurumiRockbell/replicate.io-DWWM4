@@ -30,11 +30,11 @@ use SYRADEV\app\ReplicateController;
 
 <body class="bg-black">
     <section class="">
-        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-1/2 lg:py-6">
             <a href="<?= ReplicateController::getRoute('home'); ?>" class="flex items-center mb-6 text-2xl font-semibold text-gray-900">
                 <img class="w-auto h-20 mr-2" src="<?= ReplicateController::assets('/imgs/rplc_header_logo.svg'); ?>" alt="logo" />
             </a>
-            <div class="w-full bg-black rounded-xl shadow md:mt-0 sm:max-w-md xl:p-0 border-2 border-indigo-800">
+            <div class="w-full bg-black rounded-xl shadow md:mt-0 sm:max-w-md xl:p-3 border-2 border-indigo-800">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                     <h1 class="text-xl font-bold leading-tight tracking-tight text-indigo-800 md:text-2xl">
                         Register to Replicate.io

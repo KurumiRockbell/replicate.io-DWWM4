@@ -1,25 +1,23 @@
 <?php
-/**
- * MvcUI Template page d'erreur 404
- *
- * Application MvcUI
- *
- * @package    MvcUI
- * @author     Regis TEDONE
- * @email      syradev@proton.me
- * @copyright  Syradev 2023
- * @license    https://www.gnu.org/licenses/gpl-3.0.en.html  GNU General Public License
- * @version    1.4.0
- */
 use SYRADEV\app\ReplicateController;
-
 ?>
-<div id="messageError" class="text-center px-5 py-5 animated fadeIn">
-    <a href="<?= ReplicateController::getRoute('home'); ?>" title="Page d'accueil">
-        <img id="mvclogo" src="<?= ReplicateController::assets('/imgs/mvc-ui-.svg'); ?>"
-             alt="Application MVC"></a>
-    <h1 class="display-5">Oh! 404 - PAGE NON TROUVÉE</h1>
-    <p>Malheureusement, cette page n'existe pas. <br>Veuillez vérifier votre URL <br> ou retourner &agrave; la page
-        <a href="<?= ReplicateController::getRoute('home'); ?>" title="Retourner &agrave; la page d'accueil">d'accueil</a> <br>ou revenir &agrave; la <a
-            href="javascript:history.go(-1);" title="Revenir &agrave; la page pr&eacute;c&eacute;dente">page pr&eacute;c&eacute;dente</a>.</p>
+
+<head>
+    <link rel="stylesheet" href="<?= ReplicateController::assets('/css/output.css'); ?> ">
+</head>
+<body class="bg-black text-teal-50">
+    <div id="messageError" class="text-center px-5 py-5 animate-fadeIn">
+        <a href="<?= ReplicateController::getRoute('home'); ?>" title="Page d'accueil">
+            <img id="mvclogo" src="<?= ReplicateController::assets('/imgs/rplc_header_logo.svg'); ?> " alt="Application MVC">
+        </a>
+        <div class="flex flex-col items-center justify-center h-3/4">
+            <img src="<?= ReplicateController::assets('/imgs/404.png'); ?> " alt="Orbital station artwork RPLC" width="300">
+  <h1 class="text-5xl font-bold">Oh no! 404 - Not found</h1>
+  <p>This page, not exist. <br>Verify your URL <br> Or back on 
+    <a href="<?= ReplicateController::getRoute('home'); ?>" title="Retourner à la page d'accueil" class="text-lime-400">home page</a> <br>or back on the
+    <a href="javascript:history.go(-1);" title="Revenir à la page précédente" class="text-indigo-800">preview page</a>.
+  </p>
 </div>
+
+    </div>
+</body>

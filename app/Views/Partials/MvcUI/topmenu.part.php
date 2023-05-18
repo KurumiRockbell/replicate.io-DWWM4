@@ -1,18 +1,5 @@
 <?php
 
-/**
- * MvcUI Menu du haut
- *
- * Application MvcUI
- *
- * @package    MvcUI
- * @author     Regis TEDONE
- * @email      syradev@proton.me
- * @copyright  Syradev 2023
- * @license    https://www.gnu.org/licenses/gpl-3.0.en.html  GNU General Public License
- * @version    1.4.0
- */
-
 use SYRADEV\app\ReplicateController;
 
 /**
@@ -20,14 +7,12 @@ use SYRADEV\app\ReplicateController;
  * @var $title
  * @var $toptitle
  */
-
-
 ?>
 
 <!--Header Section-->
 
-<body>
-    <header class="">
+<body class="z-10">
+    <header class="z-10">
         <nav class="bg-black">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
                 <a href="<?= ReplicateController::getRoute('home'); ?>" class="flex items-center">
@@ -60,7 +45,7 @@ use SYRADEV\app\ReplicateController;
                                 <div class="p-4 pb-0 text-gray-900 md:pb-4">
                                     <ul class="space-y-4" aria-labelledby="mega-menu-icons-dropdown-button">
                                         <li>
-                                            <a href="#" class="flex items-center text-teal-50 hover:text-indigo-800 group">
+                                            <a type="button" onClick="document.getElementById('menurplc').scrollIntoView();" class="cursor-pointer flex items-center text-teal-50 hover:text-indigo-800 group">
                                                 <span class="sr-only">Replicate</span>
                                                 <svg class="w-4 h-4 mr-2 text-teal-50 group-hover:text-indigo-800" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M20.893 13.393l-1.135-1.135a2.252 2.252 0 01-.421-.585l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 01-1.383-2.46l.007-.042a2.25 2.25 0 01.29-.787l.09-.15a2.25 2.25 0 012.37-1.048l1.178.236a1.125 1.125 0 001.302-.795l.208-.73a1.125 1.125 0 00-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 01-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 01-1.458-1.137l1.411-2.353a2.25 2.25 0 00.286-.76m11.928 9.869A9 9 0 008.965 3.525m11.928 9.868A9 9 0 118.965 3.525"></path>
@@ -69,7 +54,7 @@ use SYRADEV\app\ReplicateController;
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" class="flex items-center text-teal-50 hover:text-indigo-800 group">
+                                            <a type="button" onClick="document.getElementById('rplc').scrollIntoView();" class="cursor-pointer flex items-center text-teal-50 hover:text-indigo-800 group">
                                                 <span class="sr-only">Ozen II</span>
                                                 <svg class="w-4 h-4 mr-2 text-teal-50 group-hover:text-indigo-800" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"></path>
@@ -78,7 +63,7 @@ use SYRADEV\app\ReplicateController;
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" class="flex items-center text-teal-50 hover:text-indigo-800 group">
+                                            <a type="button" onClick="document.getElementById('card').scrollIntoView();" class="cursor-pointer flex items-center text-teal-50 hover:text-indigo-800 group">
                                                 <span class="sr-only">Cards</span>
                                                 <svg class="w-4 h-4 mr-2 text-teal-50 group-hover:text-indigo-800" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z"></path>
@@ -87,7 +72,7 @@ use SYRADEV\app\ReplicateController;
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" class="flex items-center text-teal-50 hover:text-indigo-800 group">
+                                            <a type="button" onClick="document.getElementById('team').scrollIntoView();" class="cursor-pointer flex items-center text-teal-50 hover:text-indigo-800 group">
                                                 <span class="sr-only">About us</span>
                                                 <svg class="w-4 h-4 mr-2 text-teal-50 group-hover:text-indigo-800" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"></path>

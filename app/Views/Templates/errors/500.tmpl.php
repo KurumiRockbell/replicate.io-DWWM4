@@ -1,28 +1,22 @@
 <?php
-/**
- * MvcUI Template page d'erreur 500
- *
- * Application MvcUI
- *
- * @package    MvcUI
- * @author     Regis TEDONE
- * @email      syradev@proton.me
- * @copyright  Syradev 2023
- * @license    https://www.gnu.org/licenses/gpl-3.0.en.html  GNU General Public License
- * @version    1.4.0
- */
 use SYRADEV\app\ReplicateController;
-
 ?>
-<div id="messageError" class="text-center px-5 py-5 animated fadeIn">
-    <a href="<?= ReplicateController::getRoute('home'); ?>" title="Page d'accueil">
-        <img id="mvclogo" src="<?= ReplicateController::assets('/imgs/mvc-ui-.svg'); ?>"
-             alt="Application MVC"></a>
-    <h1 class="display-5">Oh! 500 - Erreur interne du serveur</h1>
-    <p>Malheureusement, Une erreur s'est produite sur le serveur. <br>Vous pouvez soit retourner &agrave; la page
-        <a href="<?= ReplicateController::getRoute('home'); ?>" title="Retourner &agrave; la page d'accueil">d'accueil</a>
-        <br>soit
-        revenir &agrave; la <a
-                href="javascript:history.go(-1);" title="Revenir &agrave; la page pr&eacute;c&eacute;dente">page pr&eacute;c&eacute;dente</a>.
-    </p>
+
+<head>
+    <link rel="stylesheet" href="<?= ReplicateController::assets('/css/output.css'); ?> ">
+</head>
+<body class="bg-black text-teal-50">
+    <div id="messageError" class="text-center px-5 py-5 animate-fadeIn">
+        <a href="<?= ReplicateController::getRoute('home'); ?>" title="Page d'accueil">
+            <img id="mvclogo" src="<?= ReplicateController::assets('/imgs/rplc_header_logo.svg'); ?> " alt="Application MVC">
+        </a>
+        <div class="flex flex-col items-center justify-center h-3/4 mt-24">
+            <img src="<?= ReplicateController::assets('/imgs/500.png'); ?> " alt="Orbital station artwork RPLC" width="500">
+  <h1 class="text-5xl font-bold text-lime-400 mt-8">Oh! 500 - Server error!</h1>
+  An error occured by server.<br> But you can return on our 
+        <a href="<?= ReplicateController::getRoute('home'); ?>" title="Retourner &agrave; la page d'accueil" class="text-indigo-800">home page</a> <br>or alson return on<a
+            href="javascript:history.go(-1);" title="Revenir &agrave; la page pr&eacute;c&eacute;dente" class="text-lime-400">previews page</a></p>
 </div>
+
+    </div>
+</body>

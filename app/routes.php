@@ -106,6 +106,15 @@ return [
         'action' => 'checkout',
         'info' => 'Affiche la page du checkout.'
     ],
+    'profile' => [
+        'access' => 'web',
+        'privacy' => 'public',
+        'method' => 'get',
+        'route' => '/profile',
+        'class' => ReplicateController::class,
+        'action' => 'profile',
+        'info' => 'Affiche la page du profile.'
+    ],
     'dashboard' => [
         'access' => 'web',
         'privacy' => 'private',

@@ -408,6 +408,16 @@ class ReplicateController
 
     /**
      * Affichage :
+     * Affiche la page du marketplace
+     * @return void
+     */
+    public function checkout(): void
+    {
+        echo $this->render('Layouts.default', 'Templates.MvcUI.checkout', null, 'Checkout');
+    }
+
+    /**
+     * Affichage :
      * Affiche la page d'erreur 404
      * @return void
      */

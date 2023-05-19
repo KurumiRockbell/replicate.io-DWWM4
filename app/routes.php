@@ -97,6 +97,15 @@ return [
         'action' => 'market',
         'info' => 'Affiche la page du marketplace.'
     ],
+    'checkout' => [
+        'access' => 'web',
+        'privacy' => 'public',
+        'method' => 'get',
+        'route' => '/checkout',
+        'class' => ReplicateController::class,
+        'action' => 'checkout',
+        'info' => 'Affiche la page du checkout.'
+    ],
     'dashboard' => [
         'access' => 'web',
         'privacy' => 'private',

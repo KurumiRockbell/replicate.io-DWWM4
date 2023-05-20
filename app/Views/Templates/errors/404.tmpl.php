@@ -13,7 +13,7 @@ use SYRADEV\app\ReplicateController;
         <div class="flex flex-col items-center justify-center h-3/4">
             <img src="<?= ReplicateController::assets('/imgs/404.png'); ?> " alt="Orbital station artwork RPLC" width="300">
   <h1 class="text-5xl font-bold">Oh no! 404 - Not found</h1>
-  <p>This page, not exist. <br>Verify your URL <br> Or back on 
+  <p>404 Not Found"<br>Verify your URL <br> Or back on 
     <a href="<?= ReplicateController::getRoute('home'); ?>" title="Retourner à la page d'accueil" class="text-lime-400">home page</a> <br>or back on the
     <a href="javascript:history.go(-1);" title="Revenir à la page précédente" class="text-indigo-800">preview page</a>.
   </p>

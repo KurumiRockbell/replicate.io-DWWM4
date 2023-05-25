@@ -119,6 +119,15 @@ return [
         'action' => 'privacy',
         'info' => 'Affiche les mentions légales du site.'
     ],
+    'docs' => [
+        'access' => 'web',
+        'privacy' => 'public',
+        'method' => 'get',
+        'route' => '/docs',
+        'class' => ReplicateController::class,
+        'action' => 'docs',
+        'info' => 'Affiche la MCD de la base de données'
+    ],
     'dashboard' => [
         'access' => 'web',
         'privacy' => 'private',

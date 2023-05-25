@@ -1,4 +1,5 @@
 <?php
+
 use SYRADEV\app\ReplicateController;
 ?>
 
@@ -12,7 +13,7 @@ use SYRADEV\app\ReplicateController;
     <button id="menurplc" type="button" onClick="document.getElementById('rplc').scrollIntoView();" class="mb-6 text-lime-400 hover:text-white border border-lime-500 hover:bg-lime-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 lg:text-lg">
       DISCOVER REPLICATE
     </button>
-    <button type="button" class="text-indigo-800 hover:text-white border border-indigo-800 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 lg:text-lg">
+    <button onclick="navigateToMarket()" class="text-indigo-800 hover:text-white border border-indigo-800 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 lg:text-lg">
       MARKETPLACE
     </button>
     <p class="text-teal-50 w-3/4 justify-center text-justify pt-12 lg:text-center lg:w-1/2">
@@ -114,7 +115,7 @@ use SYRADEV\app\ReplicateController;
 </div>
 <div class="flex items-center justify-center pt-12 flex-col">
   <img src="<?= ReplicateController::assets('/imgs/cardsA.png'); ?>" alt="Croquis RPLC Ozen II" class="w-auto px-12 lg:w-1/2" />
-  <button type="button" class="my-8 text-lime-400 hover:text-white border border-lime-500 hover:bg-lime-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 lg:my-24 lg:text-lg">
+  <button onclick="navigateToMarket()" class="my-8 text-lime-400 hover:text-white border border-lime-500 hover:bg-lime-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 lg:my-24 lg:text-lg">
     GO TO MARKETPLACE
   </button>
 </div>

@@ -28,7 +28,7 @@ docReady(() => {
     /**
      * Evènement click sur menu hamburger
      */
-    if(navbarToggler !== null) {
+    if (navbarToggler !== null) {
         navbarToggler.addEventListener('click', (e) => {
             new bootstrap.Collapse(navbarmvcui);
             animatedHamburger.classList.toggle('open');
@@ -39,10 +39,10 @@ docReady(() => {
     /**
      * Evènement click sur bouton To top
      */
-    if(totop !== null) {
+    if (totop !== null) {
         totop.addEventListener('click', (e) => {
             e.preventDefault();
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         /** Affichage du boutn to-top suivant le scroll de la page **/
         window.onscroll = () => {
@@ -92,10 +92,10 @@ docReady(() => {
                     removeActiveLinks(paginator);
                     if (pageDemanded === 'prev') {
                         addActiveLink(paginator, parseInt(currentPageIndicator.value) - 1);
-                        pageDemanded = parseInt(currentPageIndicator.value)-1;
+                        pageDemanded = parseInt(currentPageIndicator.value) - 1;
                     } else if (pageDemanded === 'next') {
                         addActiveLink(paginator, parseInt(currentPageIndicator.value) + 1);
-                        pageDemanded = parseInt(currentPageIndicator.value)+1;
+                        pageDemanded = parseInt(currentPageIndicator.value) + 1;
                     } else {
                         paginator.querySelector(`a[data-page="${pageDemanded}"]`).classList.add('active');
                     }
@@ -122,7 +122,7 @@ docReady(() => {
     /**
      * Evènement sur bouton fullscreen
      */
-    if(fullscreen !== null) {
+    if (fullscreen !== null) {
         fullscreen.addEventListener('click', (e) => {
             e.preventDefault();
             if (d.documentElement.requestFullscreen) {
@@ -149,3 +149,25 @@ docReady(() => {
         }
     });
 });
+
+/**
+ * Permet d'aller sur le market.
+ */
+function navigateToMarket() {
+    window.location.href = "market";
+}
+
+/**
+ * Permet de retourner sur la home et de slide jusq'a l'ID concerner.
+ */
+function scrollToElement(event, id) {
+    event.preventDefault(); // Empêche le comportement par défaut du lien
+
+    const element = document.getElementById(id);
+    if (element) {
+        window.location.href = event.target.href; // Redirige vers la page "home"
+        setTimeout(function() {
+            element.scrollIntoView({ behavior: 'smooth' }); // Effectue le défilement jusqu'à l'élément spécifié après un court délai
+        }, 500);
+    }
+}

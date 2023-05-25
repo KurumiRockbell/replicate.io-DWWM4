@@ -441,6 +441,16 @@ class ReplicateController
      * Affiche la page du marketplace
      * @return void
      */
+    public function docs(): void
+    {
+        echo $this->render('Layouts.default', 'Templates.MvcUI.docs', null, 'Docs');
+    }
+
+    /**
+     * Affichage :
+     * Affiche la page du marketplace
+     * @return void
+     */
     public function privacy(): void
     {
         echo $this->render('Layouts.default', 'Templates.MvcUI.privacy', null, 'Privacy');

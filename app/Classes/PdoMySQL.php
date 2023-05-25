@@ -45,8 +45,8 @@ final class PdoMySQL {
      * @return void
      */
     private function __construct() {
-        $mvcUI = ReplicateController::getInstance();
-        $conf = $mvcUI->getConf('db');
+        $rplc = ReplicateController::getInstance();
+        $conf = $rplc->getConf('db');
         extract((array)$conf);
         try {
             $this->conx = new PDO('mysql:host='.$host.';dbname='.$database, $user, $password, [PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8']);

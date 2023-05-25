@@ -428,6 +428,27 @@ class ReplicateController
 
     /**
      * Affichage :
+     * Affiche la page du marketplace
+     * @return void
+     */
+    public function contact(): void
+    {
+        echo $this->render('Layouts.default', 'Templates.MvcUI.contact', null, 'Contact');
+    }
+
+    /**
+     * Affichage :
+     * Affiche la page du marketplace
+     * @return void
+     */
+    public function privacy(): void
+    {
+        echo $this->render('Layouts.default', 'Templates.MvcUI.privacy', null, 'Privacy');
+    }
+
+
+    /**
+     * Affichage :
      * Affiche la page d'erreur 404
      * @return void
      */

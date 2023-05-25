@@ -30,16 +30,16 @@ $mvcUi = ReplicateController::getInstance();
             class="flex flex-wrap items-center mb-6 text-sm font-medium text-lime-500 sm:mb-0"
           >
             <li>
-              <a href="#" class="mr-4 hover:underline md:mr-6">Home</a>
+            <a href="<?= ReplicateController::getRoute('home'); ?>" class="mr-4 hover:underline md:mr-6">Home</a>
             </li>
             <li>
-              <a href="#" class="mr-4 hover:underline md:mr-6">Marketplace</a>
+            <a href="<?= ReplicateController::getRoute('market'); ?>" class="mr-4 hover:underline md:mr-6">Marketplace</a>
             </li>
             <li>
-              <a href="#" class="mr-4 hover:underline md:mr-6">Contact</a>
+            <a href="<?= ReplicateController::getRoute('contact'); ?>" class="mr-4 hover:underline md:mr-6">Contact</a>
             </li>
             <li>
-              <a href="#" class="hover:underline">Privacy Policy</a>
+            <a href="<?= ReplicateController::getRoute('privacy'); ?>" class="hover:underline">Privacy Policy</a>
             </li>
           </ul>
         </div>

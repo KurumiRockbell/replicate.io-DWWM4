@@ -101,6 +101,24 @@ return [
         'action' => 'profile',
         'info' => 'Affiche la page du profile.'
     ],
+    'contact' => [
+        'access' => 'web',
+        'privacy' => 'public',
+        'method' => 'get',
+        'route' => '/contact',
+        'class' => ReplicateController::class,
+        'action' => 'contact',
+        'info' => 'Affiche le formulaire de contact.'
+    ],
+    'privacy' => [
+        'access' => 'web',
+        'privacy' => 'public',
+        'method' => 'get',
+        'route' => '/privacy',
+        'class' => ReplicateController::class,
+        'action' => 'privacy',
+        'info' => 'Affiche les mentions légales du site.'
+    ],
     'dashboard' => [
         'access' => 'web',
         'privacy' => 'private',

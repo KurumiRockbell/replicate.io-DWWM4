@@ -209,6 +209,8 @@ class UsersController extends ReplicateController
 
         $data = [];
         $data['color'] = '#ffffff';
+        $data['color2'] = '#a3e635';
+        $data['color3'] = '#3730a3';
 
         // Requête les utilisateurs en base de données
         $requeteUsers = 'SELECT * from `user` ORDER BY `uid`';
@@ -320,7 +322,7 @@ class UsersController extends ReplicateController
         $cnx = PdoMySQL::getInstance();
 
         // On récupère en base de données l'uid, le nom et le prénom de l'utilisateur
-        $usersql = sprintf('SELECT `uid`, `username`, `password` , `email` , `civilité`, `datebirth`, `country`, `roles` FROM `User` WHERE `uid` =%d', $uid);
+        $usersql = sprintf('SELECT `uid`, `username`, `password` , `email` , `civilite`, `datebirth`, `country`, `roles` FROM `User` WHERE `uid` =%d', $uid);
         $user = $cnx->requete($usersql, 'fetch');
 
         echo $this->render('Layouts.default', 'Templates.Users.deleteuser', $user, 'Supprimer un utilisateur');

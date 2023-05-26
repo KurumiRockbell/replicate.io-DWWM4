@@ -319,52 +319,6 @@ class ReplicateController
         echo $this->render('Layouts.register');
     }
 
-
-    /**
-     * Affichage :
-     * Affiche la documentation de l'API Mvc::UI
-     * @return void
-     */
-    public function apidoc(): void
-    {
-        $data = [
-            'appurl' => '/documentation/api',
-            'apptitle' => 'Documentation API Mvc::UI'
-        ];
-        echo $this->render('Layouts.default', 'Templates.MvcUI.framed', $data, $data['apptitle']);
-    }
-
-
-    /**
-     * Affichage :
-     * Affiche la documentation de la database northwind
-     * @return void
-     */
-    public function dbdoc(): void
-    {
-        $data = [
-            'appurl' => '/documentation/northwind_bdd',
-            'apptitle' => 'Documentation database northwind'
-        ];
-        echo $this->render('Layouts.default', 'Templates.MvcUI.framed', $data, $data['apptitle']);
-    }
-
-
-    /**
-     * Affichage :
-     * Affiche une documentation sur les relations de base de données
-     * @return void
-     */
-    public function relationsdoc(): void
-    {
-        $data = [
-            'appurl' => '/documentation/relations_bdd',
-            'apptitle' => 'Documentation relations base de données.'
-        ];
-        echo $this->render('Layouts.default', 'Templates.MvcUI.framed', $data, $data['apptitle']);
-    }
-
-
     /**
      * Affichage :
      * Affiche la page d'accueil

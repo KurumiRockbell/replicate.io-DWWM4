@@ -7,8 +7,8 @@
   "company": "KurumiRB",
   "version": "1.0.2",
   "user_session_name": "ReplicateUserSession",
-  "session_token_label": "REPLICATE_CSRF_TOKEN_SESS_IDX",
-  "form_token_label": "replicate-csrf-token-label",
+  "session_token_label": "MvcUI__CSRF_TOKEN_SESS_IDX",
+  "form_token_label": "mvc-ui-csrf-token-label",
   "hashAlgo": "sha3-512",
   "cipherAlgo": "aes-256-cbc",
   "db": {

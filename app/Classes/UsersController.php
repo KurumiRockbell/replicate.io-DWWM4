@@ -41,10 +41,10 @@ class UsersController extends ReplicateController
      */
     public static function getInstance(): ReplicateController
     {
-        if (DemoController::$instance === null) {
-            DemoController::$instance = new UsersController;
+        if (UsersController::$instance === null) {
+            UsersController::$instance = new UsersController;
         }
-        return DemoController::$instance;
+        return UsersController::$instance;
     }
 
 
@@ -211,10 +211,11 @@ class UsersController extends ReplicateController
         $data['color'] = '#ffffff';
 
         // Requête les utilisateurs en base de données
-        $requeteUsers = 'SELECT * from `Users` ORDER BY `uid`';
+        $requeteUsers = 'SELECT * from `user` ORDER BY `uid`';
         $data['users'] = $cnx->requete($requeteUsers);
 
         // Envoie les données des utilisateurs au template
+        echo 'USERS';
         echo $this->render('Layouts.default', 'Templates.Users.listusers', $data, 'Liste des utilisateurs');
     }
 
@@ -262,12 +263,12 @@ class UsersController extends ReplicateController
     public function editUser(): void
     {
         $data = [];
-        $data['userid'] = $_GET['uid'];
+        $data['uid'] = $_GET['uid'];
         $data['action'] = 'edituser';
 
         /** On récupère les infos de l'utilisateur en base de données */
         $cnx = PdoMySQL::getInstance();
-        $requeteUsers = sprintf('SELECT * from `Users` WHERE `uid` =%d', $data['userid']);
+        $requeteUsers = sprintf('SELECT * from `User` WHERE `uid` =%d', $data['uid']);
         $data['userinfos'] = $cnx->requete($requeteUsers, 'fetch');
 
         echo $this->render('Layouts.default', 'Templates.Users.userform', $data, 'Modifier un utilisateur');
@@ -301,7 +302,7 @@ class UsersController extends ReplicateController
         /**
          * On insère le nouvel utilisateur en base de données
          */
-        return $cnx->metajour('Users', $userObj, '`uid`=' . $cleanPost['uid']);
+        return $cnx->metajour('User', $userObj, '`uid`=' . $cleanPost['uid']);
     }
 
 
@@ -319,7 +320,7 @@ class UsersController extends ReplicateController
         $cnx = PdoMySQL::getInstance();
 
         // On récupère en base de données l'uid, le nom et le prénom de l'utilisateur
-        $usersql = sprintf('SELECT `uid`, `firstname`, `lastname` FROM `Users` WHERE `uid` =%d', $uid);
+        $usersql = sprintf('SELECT `uid`, `username`, `password` , `email` , `civilité`, `datebirth`, `country`, `roles` FROM `User` WHERE `uid` =%d', $uid);
         $user = $cnx->requete($usersql, 'fetch');
 
         echo $this->render('Layouts.default', 'Templates.Users.deleteuser', $user, 'Supprimer un utilisateur');
@@ -340,6 +341,6 @@ class UsersController extends ReplicateController
         /**
          * On supprime l'utilisateur de la base de données
          */
-        return $cnx->supprime('Users', ['uid'=>$uid]);
+        return $cnx->supprime('User', ['uid'=>$uid]);
     }
 }

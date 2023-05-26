@@ -157,6 +157,44 @@ return [
         'action' => 'disconnect',
         'info' => 'Déconnecte un utilisateur.'
     ],
+    'users'=> [
+        'access' => 'web',
+        'privacy' => 'public',
+        'method' => 'get',
+        'route' => '/users',
+        'class' => UsersController::class,
+        'action' => 'listUsers',
+        'info' => 'Exemple de CRUD utilisateurs.'
+    ],
+    'newuser'=> [
+        'access' => 'web',
+        'privacy' => 'public',
+        'method' => 'get',
+        'route' => '/users/newuser',
+        'class' => UsersController::class,
+        'action' => 'newUser',
+        'info' => 'Ajouter un utilisateur.'
+    ],
+    'edituser'=> [
+        'access' => 'web',
+        'privacy' => 'public',
+        'method' => 'get',
+        'route' => '/users/edituser',
+        'allowed_params_regex' => 'int+',
+        'class' => UsersController::class,
+        'action' => 'editUser',
+        'info' => 'Éditer un utilisateur.'
+    ],
+    'deleteuser'=> [
+        'access' => 'web',
+        'privacy' => 'public',
+        'method' => 'get',
+        'route' => '/users/deleteuser',
+        'allowed_params_regex' => 'int+',
+        'class' => UsersController::class,
+        'action' => 'deleteUser',
+        'info' => 'Supprimer un utilisateur.'
+    ],
     'redirectpagination'=> [
         'access' => 'web',
         'privacy' => 'public',

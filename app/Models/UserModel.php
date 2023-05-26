@@ -6,12 +6,13 @@ use SYRADEV\app\UsersController;
 
 class UserModel
 {
-    public int $active;
-    public string $role;
-    public string $firstname;
-    public string $lastname;
-    public string $email;
+    public string $username;
     public string $password;
+    public string $email;
+    public string $civilité;
+    public string $datebirth;
+    public string $country;
+    public string $roles;
 
 
     /**
@@ -27,10 +28,11 @@ class UserModel
         $csrfToken = $usersObj->getCsrfToken();
 
         // On affecte les valeurs du post à l'objet UserModel
-        $this->active = isset($userInfos['active']) ? (int)$userInfos['active'] : 0;
-        $this->role = (string)$userInfos['role'];
-        $this->firstname = (string)$userInfos['firstname'];
-        $this->lastname = (string)$userInfos['lastname'];
+        $this->username = (string)$userInfos['username'];
+        $this->civilité = (string)$userInfos['civilité'];
+        $this->datebirth = (string)$userInfos['datebirth'];
+        $this->country = (string)$userInfos['country'];
+        $this->roles = (string)$userInfos['roles'];
         // On décrypte l'adresse email reçue
         $this->email = (string)$usersObj->aesDecrypt(base64_decode($userInfos['cryptedEmail']), $csrfToken);
 

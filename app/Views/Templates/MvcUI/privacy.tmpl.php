@@ -4,17 +4,17 @@ use SYRADEV\app\ReplicateController;
 ?>
 
 
-<div class="text-teal-50 text-justify pt-3 flex-col flex items-center w-full">
-    <h1 class="text-lime-400 font-black text-5xl text-center md:text-6xl lg:text-7xl lg:pt-12" id="rplc">
+<div class="text-teal-50 text-justify pt-6 flex-col flex items-center w-full">
+    <h1 class="text-lime-400 font-black text-5xl text-center md:text-6xl lg:text-7xl pt-12" id="rplc">
         TERMS & CONDITIONS
     </h1>
-    <h1 class="text-indigo-800 font-black text-3xl text-center md:text-4xl lg:text-xl lg:pt-12" id="rplc">
+    <h1 class="text-indigo-800 font-black text-3xl text-center md:text-4xl lg:text-xl pt-12" id="rplc">
         1 - General Information:
     </h1>
     <p class="text-teal-50 w-3/4 text-justify pt-12 lg:text-center lg:w-1/2">
         Replicate.io is a fictitious website specialized in the sale of digital assets, including collectible cards. The website is hosted in France and is subject to French legislation. These legal notices define the terms of use of the website.
     </p>
-    <h1 class="text-indigo-800 font-black text-3xl text-center md:text-xxl lg:text-xl lg:pt-12" id="rplc">
+    <h1 class="text-indigo-800 font-black text-3xl text-center md:text-xxl lg:text-xl pt-12" id="rplc">
         2 - Website Owner:
     </h1>
     <p class="text-teal-50 w-3/4 text-justify pt-12 lg:text-center lg:w-1/2">

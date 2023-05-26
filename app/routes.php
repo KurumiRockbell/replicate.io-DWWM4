@@ -1,6 +1,8 @@
 <?php
 use SYRADEV\app\ReplicateController;
 use SYRADEV\app\DemoController;
+use SYRADEV\app\UsersController;
+
 return [
     'login' => [
         'access' => 'web',
@@ -155,34 +157,6 @@ return [
         'action' => 'disconnect',
         'info' => 'Déconnecte un utilisateur.'
     ],
-    'apidoc'=> [
-        'access' => 'web',
-        'privacy' => 'public',
-        'method' => 'get',
-        'route' => '/apidoc',
-        'class' => ReplicateController::class,
-        'action' => 'apidoc',
-        'info' => 'Documentation classe MvcUI.'
-    ],
-    'dbdoc'=> [
-        'access' => 'web',
-        'privacy' => 'public',
-        'method' => 'get',
-        'route' => '/dbdoc',
-        'class' => ReplicateController::class,
-        'action' => 'dbdoc',
-        'info' => 'Documentation de la base de données northwind.'
-    ],
-    'relationsdoc'=> [
-        'access' => 'web',
-        'privacy' => 'public',
-        'method' => 'get',
-        'route' => '/relationsdoc',
-        'class' => ReplicateController::class,
-        'action' => 'relationsdoc',
-        'info' => 'Documentation relations base de données.'
-    ],
-
     'redirectpagination'=> [
         'access' => 'web',
         'privacy' => 'public',

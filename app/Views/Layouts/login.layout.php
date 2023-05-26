@@ -1,18 +1,4 @@
 <?php
-
-/**
- *  MvcUI Layout Login
- *
- * Application MvcUI
- *
- * @package    MvcUI
- * @author     Regis TEDONE
- * @email      syradev@proton.me
- * @copyright  Syradev 2023
- * @license    https://www.gnu.org/licenses/gpl-3.0.en.html  GNU General Public License
- * @version    1.4.0
- */
-
 use SYRADEV\app\ReplicateController;
 ?>
 <!DOCTYPE html>
@@ -23,7 +9,7 @@ use SYRADEV\app\ReplicateController;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="<?= ReplicateController::getCSRFToken(); ?>">
     <meta http-equiv="refresh" content="3000">
-    <title>MVCUi login</title>
+    <title>Replicate login</title>
     <link rel="icon" type="image/svg+xml" href="<?= ReplicateController::assets('/imgs/favicon.png'); ?>">
     <link rel="stylesheet" href="<?= ReplicateController::assets('/css/output.css'); ?> ">
 </head>

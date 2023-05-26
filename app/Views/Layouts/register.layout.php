@@ -10,7 +10,7 @@ use SYRADEV\app\ReplicateController;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="<?= ReplicateController::getCSRFToken(); ?>">
     <meta http-equiv="refresh" content="3000">
-    <title>MVCUi register</title>
+    <title>Replicate register</title>
     <link rel="icon" type="image/svg+xml" href="<?= ReplicateController::assets('/imgs/favicon.png'); ?>">
     <link rel="stylesheet" href="<?= ReplicateController::assets('/css/output.css'); ?> ">
 </head>

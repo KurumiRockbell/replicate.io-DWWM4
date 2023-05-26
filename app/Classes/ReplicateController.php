@@ -14,6 +14,8 @@
 
 namespace SYRADEV\app;
 
+use NumberFormatter;
+
 /**
  * Classe MvcUIControlller : Classe principale de l'interface Mvc::UI
  */
@@ -613,6 +615,35 @@ class ReplicateController
         return hash_equals($requestToken, $expected);
     }
 
+    /**
+     * Sécurité :
+     * Insert un champ caché avec le jeton CSRF
+     * @return string *
+     */
+    public static function insertHiddenToken(): string
+    {
+        $csrfToken = self::getCSRFToken();
+        return '<input type="hidden" name="' . self::xssafe((new self)->getConf('form_token_label')) . '" value="' . $csrfToken . '">';
+    }
+
+
+/**
+ * Sécurité :
+ * Nettoie les données postées avant stockage
+ * @var array $post Le tableau posté à nettoyer
+ * @return array $post Le tableau posté nettoyé
+ */
+    protected function cleanUpValues(array $post) :array {
+        foreach ($post as $key => $value) {
+            if (is_array($value)) {
+                $post[$key] = self::cleanUpValues($value);
+            } else {
+                $post[$key] = addslashes(htmlspecialchars(trim(strip_tags($value))));
+            }
+        }
+        return $post;
+    }
+
 
 
     /***************************************************************
@@ -663,6 +694,7 @@ class ReplicateController
     /**
      * Utilitaire :
      * Fonction qui formatte un nombre en monnaie Euro
+     * @param mixed $montant Le montant à formaliser en Euros
      * @return string La chaine formalisée en Euros
      * @var string $montant Le montant à formaliser en Euros
      */

@@ -9,7 +9,7 @@ class UserModel
     public string $username;
     public string $password;
     public string $email;
-    public string $civilité;
+    public string $civilite;
     public string $datebirth;
     public string $country;
     public string $roles;
@@ -29,7 +29,7 @@ class UserModel
 
         // On affecte les valeurs du post à l'objet UserModel
         $this->username = (string)$userInfos['username'];
-        $this->civilité = (string)$userInfos['civilité'];
+        $this->civilite = (string)$userInfos['civilite'];
         $this->datebirth = (string)$userInfos['datebirth'];
         $this->country = (string)$userInfos['country'];
         $this->roles = (string)$userInfos['roles'];

@@ -1095,10 +1095,6 @@ input:checked + .toggle-bg {
   z-index: 50;
 }
 
-.col-span-6 {
-  grid-column: span 6 / span 6;
-}
-
 .m-3 {
   margin: 0.75rem;
 }
@@ -1155,6 +1151,11 @@ input:checked + .toggle-bg {
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .my-6 {
@@ -1519,10 +1520,6 @@ input:checked + .toggle-bg {
 
 .flex-nowrap {
   flex-wrap: nowrap;
-}
-
-.place-items-center {
-  place-items: center;
 }
 
 .items-start {

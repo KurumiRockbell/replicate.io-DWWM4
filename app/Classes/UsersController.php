@@ -253,7 +253,7 @@ class UsersController extends ReplicateController
         /**
          * On insère le nouvel utilisateur en base de données
          */
-        return $cnx->inserer('Users', $userObj);
+        return $cnx->inserer('User', $userObj);
     }
 
 

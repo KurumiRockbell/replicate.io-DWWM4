@@ -316,7 +316,7 @@ class ReplicateController
      */
     public function register(): void
     {
-        echo $this->render('Layouts.register');
+        echo $this->render('Layouts.default','Templates.Users.register', null, 'register');
     }
 
     /**

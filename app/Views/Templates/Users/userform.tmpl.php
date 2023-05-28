@@ -1,6 +1,7 @@
 <?php
 
 use SYRADEV\app\UsersController;
+use SYRADEV\app\ReplicateController;
 
 /**
  * @var array $data Les données en provenance du controller
@@ -88,7 +89,7 @@ if (isset($_POST['useraction']) && !empty($_POST['useraction'])) {
     }
 }
 ?>
-<div class="text-teal-50 text-justify px-12 pt-6 flex-col flex justify-center w-full">
+<div class="text-teal-50 text-justify px-12 pt-6 flex-col flex w-full">
     <div>
         <?php
         // Détermination de l'action du formulaire
@@ -106,7 +107,10 @@ if (isset($_POST['useraction']) && !empty($_POST['useraction'])) {
         <form action="<?= $actionform; ?>" id="userform" method="post" autocomplete="off">
 
             <!-- Header Area -->
-            <div class="flex justify-center text-teal-50">
+            <div class="flex justify-center text-teal-50 flex-col">
+                <a href="<?= ReplicateController::getRoute('home'); ?>" class="flex justify-center mb-6 text-2xl font-semibold text-gray-900">
+                    <img class="w-auto h-20 mr-2" src="<?= ReplicateController::assets('/imgs/rplc_header_logo.svg'); ?>" alt="logo" />
+                </a>
                 <div class="col-md-6 text-center p-3 bg-ui">
                     <a class="text-sm text-opacity-25 hover:text-opacity-100 link-underline link-underline-opacity-25 link-underline-opacity-100-hover" href="<?= UsersController::getRoute('users'); ?>">&lt; Retour à la liste</a>
                     <?php if ($action === 'newuser') { ?>
@@ -176,7 +180,7 @@ if (isset($_POST['useraction']) && !empty($_POST['useraction'])) {
                         $usernameValidationClass = in_array('username', $formErrors) ? 'border-red-500' : '';
                         ?>
                         <label for="username" class="block bg-ui py-2 px-4 text-white font-semibold">Username <?= $mandatory; ?></label>
-                        <input type="text" id="username" name="username" class="border rounded-md px-4 py-2 w-full <?= $usernameValidationClass; ?>" value="<?= $username; ?>" required>
+                        <input type="text" id="username" name="username" class="border rounded-md px-4 py-2 w-full text-black <?= $usernameValidationClass; ?>" value="<?= $username; ?>" required>
                         <?php if (in_array('username', $formErrors)) : ?>
                             <div class="text-red-500 text-sm">Choose your Username!</div>
                         <?php endif; ?>
@@ -192,7 +196,7 @@ if (isset($_POST['useraction']) && !empty($_POST['useraction'])) {
                         $passwordValidationClass = in_array('password', $formErrors) ? 'border-red-500' : '';
                         ?>
                         <label for="password" class="block bg-ui py-2 px-4 text-white font-semibold">Mot de passe <?= $action === 'newuser' ? $mandatory : ''; ?></label>
-                        <input type="password" id="password" class="border rounded-md px-4 py-2 w-full <?= $passwordValidationClass; ?>" value="<?= $password; ?>" autocomplete="new-password" required>
+                        <input type="password" id="password" class="border rounded-md px-4 py-2 w-full text-black <?= $passwordValidationClass; ?>" value="<?= $password; ?>" autocomplete="new-password" required>
                         <?php if (in_array('password', $formErrors)) : ?>
                             <div class="text-red-500 text-sm">Veuillez saisir un mot de passe !</div>
                         <?php endif; ?>
@@ -211,7 +215,7 @@ if (isset($_POST['useraction']) && !empty($_POST['useraction'])) {
                         $emailValidationClass = in_array('email', $formErrors) ? 'border-red-500' : '';
                         ?>
                         <label for="email" class="block bg-ui py-2 px-4 text-white font-semibold"><?= $mandatory; ?> Adresse email</label>
-                        <input type="text" id="email" class="border rounded-md px-4 py-2 w-full <?= $emailValidationClass; ?>" value="<?= $email; ?>" required>
+                        <input type="text" id="email" class="border rounded-md px-4 py-2 w-full text-black <?= $emailValidationClass; ?>" value="<?= $email; ?>" required>
                         <?php if (in_array('email', $formErrors)) : ?>
                             <div class="text-red-500 text-sm">Veuillez saisir une adresse mail valide !</div>
                         <?php endif; ?>
@@ -227,7 +231,7 @@ if (isset($_POST['useraction']) && !empty($_POST['useraction'])) {
                         $civiliteValidationClass = in_array('civilite', $formErrors) ? 'border-red-500' : '';
                         ?>
                         <label for="civilite" class="block bg-ui py-2 px-4 text-white font-semibold"><?= $mandatory; ?> Civilité</label>
-                        <input type="text" id="civilite" name="civilite" class="border rounded-md px-4 py-2 w-full <?= $civiliteValidationClass; ?>" value="<?= $civilite; ?>" required>
+                        <input type="text" id="civilite" name="civilite" class="border rounded-md px-4 py-2 w-full text-black <?= $civiliteValidationClass; ?>" value="<?= $civilite; ?>" required>
                         <?php if (in_array('civilite', $formErrors)) : ?>
                             <div class="text-red-500 text-sm">Choose your gender!</div>
                         <?php endif; ?>
@@ -244,7 +248,7 @@ if (isset($_POST['useraction']) && !empty($_POST['useraction'])) {
                         $datebirthValidationClass = in_array('datebirth', $formErrors) ? 'border-red-500' : '';
                         ?>
                         <label for="datebirth" class="block bg-ui py-2 px-4 text-white font-semibold"><?= $mandatory; ?> Date of birth</label>
-                        <input type="text" id="datebirth" name="datebirth" class="border rounded-md px-4 py-2 w-full <?= $datebirthValidationClass; ?>" value="<?= $datebirth; ?>" required>
+                        <input type="text" id="datebirth" name="datebirth" class="border rounded-md px-4 py-2 w-full text-black <?= $datebirthValidationClass; ?>" value="<?= $datebirth; ?>" required>
                         <?php if (in_array('datebirth', $formErrors)) : ?>
                             <div class="text-red-500 text-sm">Enter your date of birth!</div>
                         <?php endif; ?>

@@ -2,9 +2,9 @@
 use SYRADEV\app\ReplicateController;
 ?>
 
-<head>
+<header>
     <link rel="stylesheet" href="<?= ReplicateController::assets('/css/output.css'); ?> ">
-</head>
+</header>
 <body class="bg-black text-teal-50">
     <div id="messageError" class="text-center px-5 py-5 animate-fadeIn">
         <a href="<?= ReplicateController::getRoute('home'); ?>" title="Page d'accueil">

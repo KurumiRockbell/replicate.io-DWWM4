@@ -1,7 +1,8 @@
 <?php
 namespace SYRADEV\app;
 
-use SYRADEV\Model\NewsModel;
+
+
 
 /**
  * Classe DemoController étends MvcUIControlller
@@ -47,29 +48,27 @@ class NewsController extends ReplicateController
         return NewsController::$instance;
     }
 
+    
+
     /**
      * CRUD UTILISATEUR :
-     * Renvoie la liste des utilisateurs
+     * Renvoie la liste des news
      * @return void
      */
-    public function listUsers(): void
+    public function listNews(): void
     {
         // On se connecte à la database
         $cnx = PdoMySQL::getInstance();
 
         $data = [];
         $data['color'] = '#ffffff';
-        $data['color2'] = '#a3e635';
-        $data['color3'] = '#3730a3';
 
         // Requête les utilisateurs en base de données
-        $requeteUsers = 'SELECT * from `news` ORDER BY `uid`';
-        $data['users'] = $cnx->requete($requeteUsers);
+        $requeteNews = 'SELECT * FROM `news` ORDER BY `id`';
+        $data['news'] = $cnx->requete($requeteNews);
 
         // Envoie les données des utilisateurs au template
-        echo 'USERS';
-        echo $this->render('Layouts.default', 'Templates.Users.listusers', $data, 'Liste des utilisateurs');
+        echo 'NEWS';
+        echo $this->render('Layouts.default', 'Templates.MvcUI.news', $data, 'Liste des news');
     }
-// A FINIR !
-
 }

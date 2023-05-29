@@ -3,6 +3,7 @@ namespace SYRADEV\app;
 
 use SYRADEV\Model\UserModel;
 
+
 /**
  * Classe DemoController étends MvcUIControlller
  * Gestion de la pagination
@@ -132,8 +133,7 @@ class UsersController extends ReplicateController
             hash_hmac(
                 $this->hashAlgo,
                 $plaintext,
-                $this->secret
-            ),
+                $this->secret),
             hex2bin($hash)
         );
     }
@@ -244,7 +244,7 @@ class UsersController extends ReplicateController
     public function createUser(array $post): bool
     {
         /**
-         * On crée un objet User basé sur son modèle avec les données du post nettoyées
+         * On crée un objet user basé sur son modèle avec les données du post nettoyées
          */
         $userObj = new UserModel($this->cleanUpValues($post));
 
@@ -269,7 +269,7 @@ class UsersController extends ReplicateController
         $data['uid'] = $_GET['uid'];
         $data['action'] = 'edituser';
 
-        /** On récupère les infos de l'utilisateur en base de données */
+        /** On récupère les infos de l'utilisateur en base de données  */
         $cnx = PdoMySQL::getInstance();
         $requeteUsers = sprintf('SELECT * from `user` WHERE `uid` =%d', $data['uid']);
         $data['userinfos'] = $cnx->requete($requeteUsers, 'fetch');
@@ -290,12 +290,12 @@ class UsersController extends ReplicateController
         $cleanPost = $this->cleanUpValues($post);
 
         // On supprime le champ cryptedPw si il est vide
-        if (empty($cleanPost['cryptedPw'])) {
+        if(empty($cleanPost['cryptedPw'])){
             unset($cleanPost['cryptedPw']);
         }
 
         /**
-         * On crée un objet User basé sur son modèle avec les données du post nettoyées
+         * On crée un objet user basé sur son modèle avec les données du post nettoyées
          */
         $userObj = new UserModel($cleanPost);
 
@@ -317,7 +317,7 @@ class UsersController extends ReplicateController
     public function deleteUser(): void
     {
         // On récupère l'identifiant unique de l'utilisateur
-        $uid = $_GET['uid_user'] ?? $_POST['uid_user'];
+        $uid = $_GET['uid'] ?? $_POST['uid'];
 
         // On se connecte à la database
         $cnx = PdoMySQL::getInstance();
@@ -325,8 +325,6 @@ class UsersController extends ReplicateController
         // On récupère en base de données l'uid, le nom et le prénom de l'utilisateur
         $usersql = sprintf('SELECT `uid`, `username`, `password` , `email` , `civilite`, `datebirth`, `country`, `roles` FROM `user` WHERE `uid` =%d', $uid);
         $user = $cnx->requete($usersql, 'fetch');
-
-
 
         echo $this->render('Layouts.default', 'Templates.Users.deleteuser', $user, 'Supprimer un utilisateur');
     }
@@ -346,6 +344,6 @@ class UsersController extends ReplicateController
         /**
          * On supprime l'utilisateur de la base de données
          */
-        return $cnx->supprime('user', ['uid' => $uid]);
+        return $cnx->supprime('user', ['uid'=>$uid]);
     }
 }

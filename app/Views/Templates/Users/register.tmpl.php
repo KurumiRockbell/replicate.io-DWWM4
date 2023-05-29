@@ -134,7 +134,7 @@ if (isset($_POST['useraction']) && $_POST['useraction'] === "newUser") {
                     $passwordValidationClass = in_array('password', $formErrors) ? ' is-invalid' : '';
                     ?>
                     <label for="password" class="form-label bg-ui">Password <?= $mandatory; ?></label>
-                        <br>
+                    <br>
                     <input type="password" id="password" class="form-input<?= $passwordValidationClass; ?> text-black rounded-lg" value="<?= $password; ?>" autocomplete="new-password" required>
                     <div class="invalid-feedback text-indigo-800">Choose your password !</div>
                 </div>
@@ -147,10 +147,10 @@ if (isset($_POST['useraction']) && $_POST['useraction'] === "newUser") {
 
                     $emailValidationClass = in_array('email', $formErrors) ? ' is-invalid' : '';
                     ?>
-                    <label for="email" class="form-label bg-ui">Mail adress <?= $mandatory; ?></label>
+                    <label for="email" class="form-label bg-ui">Adresse email <?= $mandatory; ?></label>
                     <br>
-                    <input type="text" id="email" class="form-input<?= $emailValidationClass; ?> text-black rounded-lg" value="<?= $email; ?>" required>
-                    <div class="invalid-feedback text-indigo-800">Enter a valid mail adress !</div>
+                    <input type="text" id="email" class="form-input<?= $emailValidationClass; ?> text-black rounded-lg " value="<?= $email; ?>">
+                    <div class="invalid-feedback text-indigo-800">Veuillez saisir une adresse mail valide !</div>
                 </div>
 
                 <!-- Champ Country -->

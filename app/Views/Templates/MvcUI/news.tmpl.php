@@ -1,6 +1,8 @@
 <?php
 
 use SYRADEV\app\ReplicateController;
+
+print_r($data);
 ?>
 
 <div>

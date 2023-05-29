@@ -1,18 +1,4 @@
 <?php
-
-/**
- * MvcUI classe principale de l'interface Mvc::UI
- *
- * Application MvcUI
- *
- * @package    MvcUI
- * @author     Mehdi BENSOLTANE
- * @email      MEHDIB@proton.me
- * @copyright  MEHDIB 2023
- * @license    https://www.gnu.org/licenses/gpl-3.0.en.html  GNU General Public License
- * @version    1.4.0
- */
-
 namespace SYRADEV\app;
 
 use NumberFormatter;
@@ -84,7 +70,7 @@ class ReplicateController
      * Titre de page par défaut
      * @const PAGETITLE
      */
-    const PAGETITLE = 'TechEduc';
+    const PAGETITLE = 'Replicate.io';
 
 
     protected function __construct()
@@ -582,14 +568,13 @@ class ReplicateController
     }
 
 
-    /**
-     * Sécurité :
-     * Nettoie les données postées avant stockage
-     * @var array $post Le tableau posté à nettoyer
-     * @return array $post Le tableau posté nettoyé
-     */
-    protected function cleanUpValues(array $post): array
-    {
+/**
+ * Sécurité :
+ * Nettoie les données postées avant stockage
+ * @var array $post Le tableau posté à nettoyer
+ * @return array $post Le tableau posté nettoyé
+ */
+    protected function cleanUpValues(array $post) :array {
         foreach ($post as $key => $value) {
             if (is_array($value)) {
                 $post[$key] = self::cleanUpValues($value);

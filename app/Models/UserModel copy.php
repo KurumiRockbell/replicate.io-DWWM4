@@ -21,8 +21,7 @@ class UserModel
      * @param $userInfos
      * @return UserModel $UserModel L'objet User
      */
-    public function __construct($userInfos)
-    {
+    public function __construct($userInfos) {
 
         // Récupération du jeton CSRF pour le décryptage du mot de passe
         $usersObj = UsersController::getInstance();
@@ -38,8 +37,8 @@ class UserModel
         $this->email = (string)$usersObj->aesDecrypt(base64_decode($userInfos['cryptedEmail']), $csrfToken);
 
         // Si un mot de passe est foourni
-        if (!empty($userInfos['cryptedPw'])) {
-            // On décrypte le mot de passe reçu et on le hash avec l'algorythme argon2id
+        if(!empty($userInfos['cryptedPw'])) {
+        // On décrypte le mot de passe reçu et on le hash avec l'algorythme argon2id
             $this->password = $usersObj->argon2idHash($usersObj->aesDecrypt(base64_decode($userInfos['cryptedPw']), $csrfToken));
         }
         return $this;

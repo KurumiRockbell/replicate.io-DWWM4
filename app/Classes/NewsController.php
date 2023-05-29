@@ -1,9 +1,6 @@
 <?php
 namespace SYRADEV\app;
 
-
-
-
 /**
  * Classe DemoController étends MvcUIControlller
  * Gestion de la pagination
@@ -20,10 +17,11 @@ class NewsController extends ReplicateController
     private string $cipherAlgo;
     private string $hashAlgo;
     private string $secret;
+    
 
 
     /**
-     * Constructeur de la classe NewsController
+     * Constructeur de la classe UsersController
      */
     private function __construct()
     {
@@ -33,6 +31,7 @@ class NewsController extends ReplicateController
         $this->hashAlgo = $conf->hashAlgo;
         $this->secret = $conf->hmacData;
     }
+
 
 
     /**
@@ -49,9 +48,7 @@ class NewsController extends ReplicateController
     }
 
     
-
     /**
-     * CRUD UTILISATEUR :
      * Renvoie la liste des news
      * @return void
      */
@@ -68,7 +65,8 @@ class NewsController extends ReplicateController
         $data['news'] = $cnx->requete($requeteNews);
 
         // Envoie les données des utilisateurs au template
-        echo 'NEWS';
         echo $this->render('Layouts.default', 'Templates.MvcUI.news', $data, 'Liste des news');
     }
+
+    
 }

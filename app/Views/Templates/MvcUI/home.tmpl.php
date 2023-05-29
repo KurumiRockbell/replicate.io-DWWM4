@@ -16,7 +16,7 @@ use SYRADEV\app\ReplicateController;
     <button onclick="navigateToMarket()" class="text-indigo-800 hover:text-white border border-indigo-800 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 lg:text-lg">
       MARKETPLACE
     </button>
-    <p class="text-teal-50 w-3/4 justify-center text-justify pt-12 lg:text-center lg:w-1/2">
+    <p class="text-teal-50 w-3/4 justify-center text-justify pt-12 text-lg lg:text-center lg:w-1/2">
       Replicate.io is an entirely digital trading card game. digital trading
       card game. Our innovative platform offers to players a unique
       experience, combining strategy and competition. We offer a wide range
@@ -40,7 +40,7 @@ use SYRADEV\app\ReplicateController;
     DISCOVER <br />
     OZEN II
   </h1>
-  <p class="text-teal-50 w-3/4 text-justify pt-12 lg:text-center lg:w-1/2">
+  <p class="text-teal-50 w-3/4 text-justify pt-12 text-lg lg:text-center lg:w-1/2">
     Thanks to this new invention made available to some companies, the daily
     life of the Ozenian populations has evolved well allowing a better
     standard of living. A great facility to obtain foodstuffs, as well as an
@@ -59,7 +59,7 @@ use SYRADEV\app\ReplicateController;
   <img src="<?= ReplicateController::assets('/imgs/croquisA.png'); ?>" alt="Croquis RPLC Ozen II" />
 </div>
 <div class="text-teal-50 text-justify pt-3 flex-col flex items-center w-full">
-  <p class="text-teal-50 w-3/4 text-justify pt-12 lg:text-center lg:w-1/2">
+  <p class="text-teal-50 w-3/4 text-justify pt-12 text-lg lg:text-center lg:w-1/2">
     A large number of material and human resources, and rigorous logistics,
     are required to bring Replication technology to a higher scale. This
     logistics will therefore require the cooperation of the coalition of
@@ -76,7 +76,7 @@ use SYRADEV\app\ReplicateController;
   <img src="<?= ReplicateController::assets('/imgs/croquisB.png'); ?>" alt="Croquis RPLC Ozen II" />
 </div>
 <div class="text-teal-50 text-justify pt-3 flex-col flex items-center w-full">
-  <p class="text-teal-50 w-3/4 text-justify py-12 lg:text-center lg:w-1/2">
+  <p class="text-teal-50 w-3/4 text-justify py-12 text-lg lg:text-center lg:w-1/2">
     Set of NFT cards to collect on the Solana network, with several uses :
     Duel in the line of Pokemon , Yugiho , Magic the gathering. With cards
     having attributes and skills allowing to fight or to have an effect on
@@ -98,7 +98,7 @@ use SYRADEV\app\ReplicateController;
     DISCOVER <br />
     CARDS
   </h1>
-  <p class="text-teal-50 w-3/4 text-justify pt-12 lg:text-center lg:w-1/2">
+  <p class="text-teal-50 w-3/4 text-justify pt-12 text-lg lg:text-center lg:w-1/2">
     Thanks to this new invention made available to some companies, the daily
     life of the Ozenian populations has evolved well allowing a better
     standard of living. A great facility to obtain foodstuffs, as well as an
@@ -131,7 +131,7 @@ use SYRADEV\app\ReplicateController;
 <section>
   <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
     <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-      <p class="font-light text-lime-400 sm:text-xl">
+      <p class="font-light text-lime-400 text-lg sm:text-xl">
         Our team consists of talented and passionate individuals who work
         together to deliver exceptional results. Each of our members brings
         a unique and complementary expertise, enabling us to tackle the most

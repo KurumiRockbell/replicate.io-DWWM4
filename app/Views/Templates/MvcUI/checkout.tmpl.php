@@ -28,12 +28,12 @@ use SYRADEV\app\ReplicateController;
 </div>
 <div class="flex-col lg:flex-row flex justify-center w-full items-center ">
   <div class="w-full max-w-sm bg-black border border-lime-400 rounded-lg shadow mt-12">
-    <img class="p-8 rounded-t-lg" src="<?= ReplicateController::assets('/imgs/cardsA.png'); ?>" alt="product image" />
+    <img class="p-8 rounded-t-lg" src="<?= ReplicateController::assets('/imgs/1.png'); ?>" alt="product image" />
 
     <div class="px-5 pb-5">
       <a href="#">
         <h5 class="text-xl font-semibold tracking-tight text-teal-50">
-          Replicate Pack 2x EvoltagePack
+          Replicate AstralEnergy
         </h5>
       </a>
       <div class="flex items-center mt-2.5 mb-5">
@@ -65,12 +65,12 @@ use SYRADEV\app\ReplicateController;
     </div>
   </div>
   <div class="w-full max-w-sm bg-black border border-lime-400 rounded-lg shadow mt-12">
-    <img class="p-8 rounded-t-lg" src="<?= ReplicateController::assets('/imgs/cardsA.png'); ?>" alt="product image" />
+    <img class="p-8 rounded-t-lg" src="<?= ReplicateController::assets('/imgs/2.png'); ?>" alt="product image" />
 
     <div class="px-5 pb-5">
       <a href="#">
         <h5 class="text-xl font-semibold tracking-tight text-teal-50">
-          Replicate Pack 2x EvoltagePack
+          Replicate SilencerNight
         </h5>
       </a>
       <div class="flex items-center mt-2.5 mb-5">

@@ -3,15 +3,6 @@
 use SYRADEV\app\UsersController;
 use SYRADEV\app\ReplicateController;
 
-
-/**
- * @var array $data Les données en provenance du controller
- * $data['action'] > newuser || edituser
- * $data['userid']
- * $data['userinfos']
- */
-// extract($data);
-
 /**
  * @string $mandatory Message pour les champs obligatoires
  */
@@ -83,7 +74,7 @@ if (isset($_POST['useraction']) && $_POST['useraction'] === "newUser") {
 ?>
 <div class="grid grid-cols-1 text-teal-50 text-3xl">
     <div class="bg-secondary bg-gradient text-center">
-        <h1 class="font-bold text-white my-4">INSCRIPTION</h1>
+        <h1 class="font-bold text-white my-4">REGISTER</h1>
     </div>
     <a href="<?= ReplicateController::getRoute('home'); ?>" class="flex justify-center mb-6 text-2xl font-semibold text-gray-900">
         <img class="w-auto h-20 mr-2" src="<?= ReplicateController::assets('/imgs/rplc_header_logo.svg'); ?>" alt="logo" />
@@ -103,7 +94,7 @@ if (isset($_POST['useraction']) && $_POST['useraction'] === "newUser") {
         </div>
 
 
-        <!-- Formulaire Ajout/Modification d'un utilisateur -->
+        <!-- Formulaire Ajout d'un utilisateur -->
         <div class="flex justify-center text-teal-50">
             <div class="col-md-6 border-4 border-indigo-800 rounded-lg p-8">
 
@@ -128,10 +119,10 @@ if (isset($_POST['useraction']) && $_POST['useraction'] === "newUser") {
 
                     $usernameValidationClass = in_array('username', $formErrors) ? ' is-invalid' : '';
                     ?>
-                    <label for="username" class="form-label bg-ui">username <?= $mandatory; ?></label>
+                    <label for="username" class="form-label bg-ui">Username <?= $mandatory; ?></label>
                     <br>
                     <input type="text" id="username" name="username" class="form-input<?= $usernameValidationClass; ?> text-black rounded-lg" value="<?= $username; ?>" required>
-                    <div class="invalid-feedback text-indigo-800">Veuillez saisir un username !</div>
+                    <div class="invalid-feedback text-indigo-800">Choose your username !</div>
                 </div>
 
                 <!-- Champ Mot de passe -->
@@ -142,11 +133,10 @@ if (isset($_POST['useraction']) && $_POST['useraction'] === "newUser") {
 
                     $passwordValidationClass = in_array('password', $formErrors) ? ' is-invalid' : '';
                     ?>
-                    <label for="password" class="form-label bg-ui">Mot de
-                        passe <?= $mandatory; ?></label>
+                    <label for="password" class="form-label bg-ui">Password <?= $mandatory; ?></label>
                         <br>
                     <input type="password" id="password" class="form-input<?= $passwordValidationClass; ?> text-black rounded-lg" value="<?= $password; ?>" autocomplete="new-password" required>
-                    <div class="invalid-feedback text-indigo-800">Veuillez saisir un mot de passe !</div>
+                    <div class="invalid-feedback text-indigo-800">Choose your password !</div>
                 </div>
 
                 <!-- Champ Email -->
@@ -157,10 +147,10 @@ if (isset($_POST['useraction']) && $_POST['useraction'] === "newUser") {
 
                     $emailValidationClass = in_array('email', $formErrors) ? ' is-invalid' : '';
                     ?>
-                    <label for="email" class="form-label bg-ui">Adresse email <?= $mandatory; ?></label>
+                    <label for="email" class="form-label bg-ui">Mail adress <?= $mandatory; ?></label>
                     <br>
                     <input type="text" id="email" class="form-input<?= $emailValidationClass; ?> text-black rounded-lg" value="<?= $email; ?>" required>
-                    <div class="invalid-feedback text-indigo-800">Veuillez saisir une adresse mail valide !</div>
+                    <div class="invalid-feedback text-indigo-800">Enter a valid mail adress !</div>
                 </div>
 
                 <!-- Champ Country -->
@@ -170,10 +160,10 @@ if (isset($_POST['useraction']) && $_POST['useraction'] === "newUser") {
                         ? $_POST['country'] : '';
                     $countryValidationClass = in_array('country', $formErrors) ? ' is-invalid' : '';
                     ?>
-                    <label for="country" class="form-label bg-ui">country <?= $mandatory; ?></label>
+                    <label for="country" class="form-label bg-ui">Country <?= $mandatory; ?></label>
                     <br>
                     <input type="text" id="country" name="country" class="form-input<?= $countryValidationClass; ?> text-black rounded-lg" value="<?= $country; ?>" required>
-                    <div class="invalid-feedback text-indigo-800">Veuillez saisir un country !</div>
+                    <div class="invalid-feedback text-indigo-800">Choose your country !</div>
                 </div>
 
                 <!-- Champ datebirth -->
@@ -183,10 +173,10 @@ if (isset($_POST['useraction']) && $_POST['useraction'] === "newUser") {
                         ? $_POST['datebirth'] : '';
                     $datebirthValidationClass = in_array('datebirth', $formErrors) ? ' is-invalid' : '';
                     ?>
-                    <label for="datebirth" class="form-label bg-ui">datebirth <?= $mandatory; ?></label>
+                    <label for="datebirth" class="form-label bg-ui">Date of birth <?= $mandatory; ?></label>
                     <br>
                     <input type="text" id="datebirth" name="datebirth" class="form-input<?= $datebirthValidationClass; ?> text-black rounded-lg" value="<?= $datebirth; ?>" required>
-                    <div class="invalid-feedback text-indigo-800">Veuillez saisir une datebirth !</div>
+                    <div class="invalid-feedback text-indigo-800">Choose your date of birth !</div>
                 </div>
 
                 <!-- Champ civilité -->
@@ -196,19 +186,19 @@ if (isset($_POST['useraction']) && $_POST['useraction'] === "newUser") {
                         ? $_POST['civilite'] : '';
                     $civiliteValidationClass = in_array('civilite', $formErrors) ? ' is-invalid' : '';
                     ?>
-                    <label for="civilite" class="form-label bg-ui">civilite <?= $mandatory; ?></label>
+                    <label for="civilite" class="form-label bg-ui">Gender <?= $mandatory; ?></label>
                     <br>
                     <input type="text" id="civilite" name="civilite" class="form-input<?= $civiliteValidationClass; ?> text-black rounded-lg" value="<?= $civilite; ?>" required>
-                    <div class="invalid-feedback text-indigo-800">Veuillez saisir une civilite !</div>
+                    <div class="invalid-feedback text-indigo-800">Choose your gender !</div>
                 </div>
             </div>
         </div>
 
         <!-- Boutons d'action -->
-        <div class="flex justify-center">
+        <div class="flex justify-center mt-6">
             <div class="col-md-6 text-center pb-5 bg-ui">
                 <div class="form-group mb-5">
-                    <a href="<?= UsersController::getRoute('home'); ?>" class="btn text-teal-50 bg-indigo-800 hover:bg-indigo-950 rounded-lg p-4 ">Annuler</a>
+                    <a href="<?= UsersController::getRoute('home'); ?>" class="btn text-teal-50 bg-indigo-800 hover:bg-indigo-950 rounded-lg p-4 mr-3 ">Annuler</a>
                     <button id="actionuser" type="button" class="btn text-black bg-lime-400 rounded-lg hover:bg-lime-600 p-3 ">
                         Enregistrer
                     </button>

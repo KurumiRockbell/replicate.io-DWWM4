@@ -264,7 +264,7 @@ if (isset($_POST['useraction']) && !empty($_POST['useraction'])) {
                         $countryValidationClass = in_array('country', $formErrors) ? 'border-red-500' : '';
                         ?>
                         <label for="country" class="block bg-ui py-2 px-4 text-white font-semibold"><?= $mandatory; ?> Country</label>
-                        <input type="text" id="country" name="country" class="border rounded-md px-4 py-2 w-full <?= $countryValidationClass; ?>" value="<?= $country; ?>" required>
+                        <input type="text" id="country" name="country" class="border rounded-md px-4 py-2 w-full text-black <?= $countryValidationClass; ?>" value="<?= $country; ?>" required>
                         <?php if (in_array('country', $formErrors)) : ?>
                             <div class="text-red-500 text-sm">Enter your location!</div>
                         <?php endif; ?>

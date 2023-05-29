@@ -2,6 +2,8 @@
 namespace SYRADEV\app;
 
 use SYRADEV\Model\UserModel;
+use SYRADEV\Model\ContactModel;
+
 
 /**
  * Classe DemoController étends MvcUIControlller
@@ -268,7 +270,7 @@ class UsersController extends ReplicateController
         $data['uid'] = $_GET['uid'];
         $data['action'] = 'edituser';
 
-        /** On récupère les infos de l'utilisateur en base de données */
+        /** On récupère les infos de l'utilisateur en base de données  */
         $cnx = PdoMySQL::getInstance();
         $requeteUsers = sprintf('SELECT * from `User` WHERE `uid` =%d', $data['uid']);
         $data['userinfos'] = $cnx->requete($requeteUsers, 'fetch');

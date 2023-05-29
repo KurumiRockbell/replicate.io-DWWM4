@@ -376,7 +376,7 @@ class ReplicateController
      */
     public function contact(): void
     {
-        echo $this->render('Layouts.default', 'Templates.MvcUI.contact', null, 'Contact');
+        echo $this->render('Layouts.default', 'Templates.MvcUI.contact', null, 'Contactform');
     }
 
     /**

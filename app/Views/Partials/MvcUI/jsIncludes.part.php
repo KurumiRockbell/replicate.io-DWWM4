@@ -1,4 +1,5 @@
 <?php
+
 use SYRADEV\app\ReplicateController;
 
 if (

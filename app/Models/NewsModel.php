@@ -11,8 +11,7 @@ class NewsModel
     public string $description;
     public string $content;
     public string $date;
-    public int $uid_user;
-
+    
 
     /**
      * Système :
@@ -24,6 +23,7 @@ class NewsModel
 
         // Récupération du jeton CSRF pour le décryptage du mot de passe
         $newsObj = NewsController::getInstance();
+        $csrfToken = $newsObj->getCsrfToken();
 
         // On affecte les valeurs du post à l'objet UserModel
         $this->id = (int)$newsInfos['id'];
@@ -31,7 +31,6 @@ class NewsModel
         $this->description = (string)$newsInfos['description'];
         $this->content = (string)$newsInfos['content'];
         $this->date = (string)$newsInfos['date'];
-        $this->uid_user = (int)$newsInfos['uid_user'];
         return $this;
     }
 }

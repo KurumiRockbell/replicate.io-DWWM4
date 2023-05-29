@@ -317,7 +317,7 @@ class UsersController extends ReplicateController
     public function deleteUser(): void
     {
         // On récupère l'identifiant unique de l'utilisateur
-        $uid = $_GET['uid_user'] ?? $_POST['uid_user'];
+        $uid = $_GET['uid'] ?? $_POST['uid'];
 
         // On se connecte à la database
         $cnx = PdoMySQL::getInstance();
